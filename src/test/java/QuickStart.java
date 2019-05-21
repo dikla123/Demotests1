@@ -18,7 +18,7 @@ public class QuickStart {
 
     @Before
     public void setUp() throws MalformedURLException {
-        dc.setCapability("testName", "Quick Start iOS Native Demo");
+        dc.setCapability("testName", "Quick Start iOS Native");
         dc.setCapability("accessKey", accessKey);
         dc.setCapability("deviceQuery", "@os='ios' and @category='PHONE'");
         dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
