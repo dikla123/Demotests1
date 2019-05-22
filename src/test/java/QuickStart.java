@@ -20,7 +20,7 @@ public class QuickStart {
     public void setUp() throws MalformedURLException {
         dc.setCapability("testName", "Quick Start iOS Native");
         dc.setCapability("accessKey", accessKey);
-        dc.setCapability("deviceQuery", "@os='ios' and @category='PHONE'");
+        dc.setCapability("deviceQuery", "@os='ios'");
         dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
         dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
         driver = new IOSDriver<>(new URL("https://qacloud.experitest.com/wd/hub"), dc);
