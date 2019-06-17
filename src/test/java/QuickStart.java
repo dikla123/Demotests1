@@ -21,13 +21,14 @@ public class QuickStart {
         dc.setCapability("testName", "Eribank iOS");
         dc.setCapability("accessKey", accessKey);
         dc.setCapability("deviceQuery", "@serialnumber='00008020-000844AC3408002E'");
-        dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
+//        dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
         dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
         driver = new IOSDriver<>(new URL("https://mastercloud.experitest.com/wd/hub"), dc);
     }
 
     @Test
     public void quickStartiOSNativeDemo() {
+
 
         driver.rotate(ScreenOrientation.PORTRAIT);
         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("company");
