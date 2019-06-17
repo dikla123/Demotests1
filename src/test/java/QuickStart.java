@@ -20,7 +20,7 @@ public class QuickStart {
     public void setUp() throws MalformedURLException {
         dc.setCapability("testName", "Eribank iOS");
         dc.setCapability("accessKey", accessKey);
-        dc.setCapability("deviceQuery", "@os='ios'");
+        dc.setCapability("deviceQuery", "@serialnumber='00008020-000844AC3408002E'");
         dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
         dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
         driver = new IOSDriver<>(new URL("https://mastercloud.experitest.com/wd/hub"), dc);
