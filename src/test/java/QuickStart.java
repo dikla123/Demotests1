@@ -12,7 +12,7 @@ import java.net.URL;
 
 public class QuickStart {
 
-    private String accessKey = "eyJ4cC51IjoyMTg0LCJ4cC5wIjoyLCJ4cC5tIjoiTVRVeE1qWTBNRFU0TXpjek9BIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjQ2ODI4MzE2ODIsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.p9txXSa_Br32EFSCT8igpEddnh5rzsWTishPlj1-TXg";
+    private String accessKey = "eyJ4cC51IjoyLCJ4cC5wIjoxLCJ4cC5tIjoiTVRVMU56ZzBOVE14TWpFeU1nIiwiYWxnIjoiSFMyNTYifQ.eyJleHAiOjE4NzM4NzM3MDEsImlzcyI6ImNvbS5leHBlcml0ZXN0In0.7atGXsjevGa3XwIbFUXPcZDiW498w0LkzqlYz1xBv8w";
     protected IOSDriver<IOSElement> driver = null;
     DesiredCapabilities dc = new DesiredCapabilities();
 
@@ -23,11 +23,12 @@ public class QuickStart {
         dc.setCapability("deviceQuery", "@os='ios'");
         dc.setCapability(MobileCapabilityType.APP, "cloud:com.experitest.ExperiBank");
         dc.setCapability(IOSMobileCapabilityType.BUNDLE_ID, "com.experitest.ExperiBank");
-        driver = new IOSDriver<>(new URL("https://qacloud.experitest.com/wd/hub"), dc);
+        driver = new IOSDriver<>(new URL("https://mastercloud.experitest.com/wd/hub"), dc);
     }
 
     @Test
     public void quickStartiOSNativeDemo() {
+
         driver.rotate(ScreenOrientation.PORTRAIT);
         driver.findElement(By.xpath("//*[@id='usernameTextField']")).sendKeys("company");
         driver.hideKeyboard();
