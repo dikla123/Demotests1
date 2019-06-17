@@ -21,7 +21,7 @@ public class QuickStart {
     private IOSDriver<IOSElement> driver = null;
     private DesiredCapabilities dc = new DesiredCapabilities();
     private String status = "failed";
-    private String uid = System.getProperty("deviceID");
+    private String uid = System.getenv("deviceID");
 
     @Before
     public void setUp() throws MalformedURLException {
